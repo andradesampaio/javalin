@@ -1,0 +1,25 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+}
+
+group 'br.com.javalin'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.javalin', name: 'javalin', version: '3.13.10'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.0-alpha3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0-rc1'
+    implementation 'io.insert-koin:koin-core:2.2.3'
+    testImplementation 'io.insert-koin:koin-test:2.2.3'
+}
+
+test {
+    useJUnitPlatform()
+}
